@@ -1,0 +1,13 @@
+[user]
+    name = Amit Kulkarni
+[alias]
+    p = push origin $(git rev-parse --abbrev-ref HEAD)
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format=\"%(refname:short)\"
+
