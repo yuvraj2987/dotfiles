@@ -3,8 +3,6 @@
 # PATH
 export PATH="/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export EDITOR='vim'
-# export PYTHONPATH=$PYTHONPATH
-# export MANPATH="/usr/local/man:$MANPATH"
 
 # Virtual Environment
 export WORKON_HOME=$HOME/.virtualenvs
@@ -33,4 +31,8 @@ export PYENV_ROOT="$HOME/.pyenv"
 #export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# Google SDK
+export PATH=$PATH:/Users/amitk/google-cloud-sdk/bin
+# Work specific bash files
 source "${HOME}/wepay.sh"
