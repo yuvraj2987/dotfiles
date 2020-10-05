@@ -14,6 +14,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 "Add your bundles here
+Plugin 'valloric/youcompleteme'
 Plugin 'https://github.com/tpope/vim-fugitive' "So awesome, it should be illegal
 Plugin 'scrooloose/nerdtree' " File explorer
 Plugin 'w0rp/ale' " Async Linter for multiple languages
