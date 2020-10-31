@@ -1,0 +1,87 @@
+"""" START Vundle Configuration
+"""" Vundle is a VIM package manager - all plugins go in here
+
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+" All of your Plugins must be added before the following line
+Plugin 'scrooloose/nerdtree' " File explorer
+Plugin 'w0rp/ale' " Async Linter for multiple languages
+Plugin 'vim-airline/vim-airline' " Status Line manger. Works with ale
+Plugin 'Yggdroot/indentLine' " IndentLine
+" Python Specific plugins
+Plugin 'Vimjas/vim-python-pep8-indent'
+
+" Plugin 'fatih/vim-go' " Go SDK
+Plugin 'elzr/vim-json' " JSON
+
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"""" END Vundle Configuration
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" General vim settings for all files
+syntax on " enable file syntax
+set number " enable line number
+" Default Indentation follow python
+" No tabs
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tw=79
+
+" Nerdtree
+let g:NERDTreeNodeDelimiter = "\u00a0"
+" ale - async linter
+" set error/warning with airline plugin
+let g:airline#extensions#ale#enabled = 1
+
+"
+" Do not write any backup file
+set noswapfile
+set nobackup
+
+set hidden         " hides buffers instead of closing them. You have to save file/buffer separately.
+set backspace=indent,eol,start
+set showmatch
+set ignorecase        " ignore cases when searching
+set smartcase        " ignore cases if search pattern is all in lower case,
+" case sensitive otherwise
+set incsearch        " show search matches as you type.
+set history=1000    " remember more commands
+set undolevels=20
+set title
+set tw=79          " set text width
+" paste mode. Pasting from external source press F2 key to avoid weired
+" formatting
+set pastetoggle=<F2>
+
+
+" Set IndentLine chars
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+set listchars=tab:>-
+" enable syntax and indentation
+syntax on
+filetype indent plugin on
+" Remove trailing spaces
+autocmd BufWritePre * :%s/\s\+$//e
+" Set jinja filetype
+au BufNewFile,BufRead *.j2 set ft=jinja
+" NERDTREE
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" ALE - Async linter
+" Set error/warning with airline plugin
+let g:airline#extensions#ale#enabled = 1
+" Display Error message in status line
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
