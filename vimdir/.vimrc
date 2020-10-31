@@ -12,7 +12,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " All of your Plugins must be added before the following line
 Plugin 'scrooloose/nerdtree' " File explorer
-Plugin 'w0rp/ale' " Async Linter for multiple languages
+Plugin 'dense-analysis/ale' " Async Linter for multiple languages
 Plugin 'vim-airline/vim-airline' " Status Line manger. Works with ale
 Plugin 'Yggdroot/indentLine' " IndentLine
 " Python Specific plugins
@@ -64,19 +64,25 @@ set tw=79          " set text width
 " formatting
 set pastetoggle=<F2>
 
-
 " Set IndentLine chars
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-set listchars=tab:>-
 " enable syntax and indentation
 syntax on
 filetype indent plugin on
 " Remove trailing spaces
 autocmd BufWritePre * :%s/\s\+$//e
-" Set jinja filetype
-au BufNewFile,BufRead *.j2 set ft=jinja
 " NERDTREE
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" Split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+" Default split opens in right bottom corner
+set splitbelow
+set splitright
+
 
 " ALE - Async linter
 " Set error/warning with airline plugin
