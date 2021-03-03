@@ -1,13 +1,16 @@
 #!/bin/zsh
 
 # PATH
-export PATH="/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export EDITOR='vim'
 
 ## Virtual Environment
 #export WORKON_HOME=$HOME/.virtualenvs
 #export PROJECT_HOME=$HOME/projects
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+
+## Add GnuSed to MacOS
+export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
 
 #ssh without changing known_hosts
 function ssh_login() { ssh -q -o UserKnownHostsFile=/dev/null -A "$1" }
