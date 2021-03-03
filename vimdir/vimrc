@@ -12,13 +12,14 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 " All of your Plugins must be added before the following line
 Plugin 'scrooloose/nerdtree' " File explorer
+" Plugin 'ycm-core/YouCompleteMe' " Code Completion Plugin. Requires other installtion.
 Plugin 'dense-analysis/ale' " Async Linter for multiple languages
 Plugin 'vim-airline/vim-airline' " Status Line manger. Works with ale
 Plugin 'Yggdroot/indentLine' " IndentLine
 " Python Specific plugins
 Plugin 'Vimjas/vim-python-pep8-indent'
-
-" Plugin 'fatih/vim-go' " Go SDK
+Plugin 'hashivim/vim-vagrant.git' " Vagrant
+Plugin 'fatih/vim-go' " Go SDK
 Plugin 'elzr/vim-json' " JSON
 
 
