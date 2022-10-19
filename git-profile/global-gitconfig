@@ -1,6 +1,6 @@
 [includeIf "gitdir:~/Work/Repo/WePay/"]
-	path = ~/gitconfig/work/gitconfig
+	path = ~/dotfiles/git-profile/custom/work
 [includeIf "gitdir:~/Work/Repo/Private/"]
-	path = ~/gitconfig/github/gitconfig
+	path = ~/dotfiles/git-profile/custom/personal
 [pull]
 	ff = only
