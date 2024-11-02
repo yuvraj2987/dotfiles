@@ -50,6 +50,13 @@ export PATH=/usr/local/opt/ruby/bin:$PATH
 export GOPATH=$HOME/Work/Repo/Private/Go-Workspace
 export GOBIN=$GOPATH/bin/
 
+# Java
+# aliase commands to enable easy setting of JDK version
+alias setJDK8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
+
+# set to the default JDK
+export JAVA_HOME=`/usr/libexec/java_home`
+
 # Personal Projetcs
 alias sw-private="gcloud config configurations activate personal-cloud"
 
@@ -60,4 +67,7 @@ source "${HOME}/dotfiles/env-profiles/kubectl.sh"
 source "${HOME}/dotfiles/env-profiles/wepay.sh"
 
 # Evaluate pyenv path
-# eval "$(pyenv init --path)"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+

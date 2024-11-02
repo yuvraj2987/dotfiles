@@ -4,19 +4,22 @@
 # ssh
 alias sshtst="ssh -A $(whoami)_wepay_com@is-jh.devops.wepay-inc.com"
 alias sshprd-ea="ssh -A ea_$(whoami)_wepay_com@prd-adm-jh.devops.wepay-inc.com"
-alias sshprd-adm="ssh -A $(whoami)_wepay_com@prd-adm-jh.devops.wepay-inc.com"
-alias sshprd-adm2="ssh -A $(whoami)_wepay_com@prd-adm-jh2.devops.wepay-inc.com"
+alias sshprd="ssh -A $(whoami)_wepay_com@prd-adm-jh.devops.wepay-inc.com"
+alias sshprd2="ssh -A $(whoami)_wepay_com@prd-adm-jh2.devops.wepay-inc.com"
 ## East
 alias sshprd-east="ssh -A $(whoami)_wepay_com@prd-adm-east-jh.devops.wepay-inc.com"
+alias sshprd-east-ea="ssh -A ea_$(whoami)_wepay_com@prd-adm-east-jh.devops.wepay-inc.com"
+
 
 ## non Prod SSH
 alias sshstg="ssh -A $(whoami)_wepay_com@stg-jh.devops.wepay-inc.com"
-alias sshdevops="ssh -A $(whoami)_wepay_com@aut-jh.devops.wepay-inc.com"
+alias sshaut="ssh -A $(whoami)_wepay_com@aut-jh.devops.wepay-inc.com"
 alias poc-ansible="ssh -A poc-ansible-01"
 alias sshdyn="ssh -A dyn-jh.devops.wepay-inc.com"
 alias sshdsprd="ssh -A ds-prd-jh.devops.wepay-inc.com"
 alias sshdevtest="ssh -A $(whoami)_wepay_com@devtest-adm-jh.devops.wepay-inc.com"
 alias sshdevtesteast="ssh -A $(whoami)_wepay_com@34.75.184.60"
+
 
 # cd
 alias cdwork="cd ~/Work"
@@ -34,17 +37,18 @@ export prd="platinum-fortress-817"
 export tst="atomic-sled-797"
 export stg="silver-castle-817"
 export poc="mythic-crane-708"
+export devtest="devtest-286119"
 
 # gcloud configuration
-alias sw-poc="gcloud config configurations activate default"
+alias sw-poc="gcloud config configurations activate poc"
 alias sw-tst="gcloud config configurations activate tst"
 alias sw-stg="gcloud config configurations activate stg"
 alias sw-prd="gcloud config configurations activate prd"
 alias sw-prd-ea="gcloud config configurations activate prd-ea"
-alias sw-service-infra="gcloud config configurations activate service-infra"
+alias sw-aut="gcloud config configurations activate aut"
 alias sw-test-devops="gcloud config configurations activate devops-test"
 alias sw-devtest="gcloud config configurations activate devtest"
-alias sw-devtest-east="gcloud config configurations activate devtest-east"
+alias sw-devtest-east="gcloud config configurations activate devtesteast"
 
 
 alias clusters="gcloud container clusters list"
@@ -58,6 +62,10 @@ function cluster-login() {
 # funcion login() {
 #     gcloud compute os-login ssh-keys add --key-file=~/.ssh/id_rsa.pub --ttl=0
 # }
+#
+
+# Docker m1 architecture config
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
 
 # GPG signing
 export GPG_TTY=$(tty)
