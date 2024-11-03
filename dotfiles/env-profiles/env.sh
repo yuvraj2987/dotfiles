@@ -60,14 +60,12 @@ export JAVA_HOME=`/usr/libexec/java_home`
 # Personal Projetcs
 alias sw-private="gcloud config configurations activate personal-cloud"
 
-# Kubernetes Aliases
-source "${HOME}/dotfiles/env-profiles/kubectl.sh"
-
-# Work specific bash files
-source "${HOME}/dotfiles/env-profiles/wepay.sh"
-
 # Evaluate pyenv path
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# Work specific bash files
+source "${HOME}/dotfiles/env-profiles/wepay.sh"
+
 
