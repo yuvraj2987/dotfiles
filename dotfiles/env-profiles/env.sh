@@ -19,6 +19,10 @@ alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 
 # Command Aliases
 #
+# Chezmoi - dotfile manager
+alias chezmoi='dotfiles'
+
+#
 # Cheat Sheet Service
 function cheatsh() { curl cht.sh/"$1"}
 
