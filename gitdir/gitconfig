@@ -1,6 +1,0 @@
-[includeIf "gitdir:~/Work/Repo/WePay/"]
-	path = ~/gitconfig/work/gitconfig
-[includeIf "gitdir:~/Work/Repo/Private/"]
-	path = ~/gitconfig/github/gitconfig
-[pull]
-	ff = only

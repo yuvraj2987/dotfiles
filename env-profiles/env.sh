@@ -1,7 +1,8 @@
 #!/bin/zsh
 
 # PATH
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+# export PATH="/usr/local/sbin:/usr/local/bin:/usr/local/go/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR='vim'
 
 ## Virtual Environment
@@ -34,12 +35,10 @@ alias gc="git commit "
 # Wetools
 export PATH=$PATH:/Users/amitk/we-tools-cli/bin
 
-# Pyenv
+# # Pyenv
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 # Google SDK
 export PATH=$PATH:/Users/amitk/google-cloud-sdk/bin
@@ -47,12 +46,28 @@ export PATH=$PATH:/Users/amitk/google-cloud-sdk/bin
 # Latest Ruby Version
 export PATH=/usr/local/opt/ruby/bin:$PATH
 
-# Personal Projetcs
-alias sw-private="gcloud config configurations activate personal-cloud"
-# Work specific bash files
-source "${HOME}/wepay.sh"
-
-
 # Go
 export GOPATH=$HOME/Work/Repo/Private/Go-Workspace
 export GOBIN=$GOPATH/bin/
+
+# Java
+# aliase commands to enable easy setting of JDK version
+alias setJDK8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
+
+# set to the default JDK
+export JAVA_HOME=`/usr/libexec/java_home`
+
+# Personal Projetcs
+alias sw-private="gcloud config configurations activate personal-cloud"
+
+# Kubernetes Aliases
+source "${HOME}/dotfiles/env-profiles/kubectl.sh"
+
+# Work specific bash files
+source "${HOME}/dotfiles/env-profiles/wepay.sh"
+
+# Evaluate pyenv path
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
