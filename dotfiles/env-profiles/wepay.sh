@@ -1,5 +1,7 @@
 #!/bin/zsh
-#
+
+# Wetools
+export PATH=$PATH:/Users/amitk/we-tools-cli/bin
 
 # ssh
 alias sshtst="ssh -A $(whoami)_wepay_com@is-jh.devops.wepay-inc.com"

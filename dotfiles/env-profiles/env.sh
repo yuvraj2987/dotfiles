@@ -6,8 +6,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR='vim'
 
 ## Virtual Environment
-#export WORKON_HOME=$HOME/.virtualenvs
-#export PROJECT_HOME=$HOME/projects
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
 ## Add GnuSed to MacOS
@@ -57,8 +55,6 @@ alias setJDK8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
 # set to the default JDK
 export JAVA_HOME=`/usr/libexec/java_home`
 
-# Personal Projetcs
-alias sw-private="gcloud config configurations activate personal-cloud"
 
 # Evaluate pyenv path
 eval "$(pyenv init --path)"
