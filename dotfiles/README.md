@@ -1,4 +1,12 @@
+# Dotfiles repo
+This repo is managed by (chezmoi)[https://www.chezmoi.io/].
+The root repo currently maps to users home directory. All references
+will be using $HOME variable.
+
+
 # Table of content
+
+
 
 
 ## Fresh Setup
