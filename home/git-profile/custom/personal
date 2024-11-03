@@ -1,0 +1,19 @@
+[user]
+    name = Amit Kulkarni
+    email = yuvraj2987@gmail.com
+[alias]
+    p = push origin $(git rev-parse --abbrev-ref HEAD)
+    co = checkout
+    ci = commit
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format=\"%(refname:short)\"
+[core]
+	excludesfile = /Users/amitk/.gitignore
+[pull]
+    ff = only
+[user]
+	signingkey = 8D9A60D9D49B590BBA2BF094D7983D84721F6447
