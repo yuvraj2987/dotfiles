@@ -1,2 +1,0 @@
-" Runs everytime vim starts
-
