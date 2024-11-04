@@ -15,13 +15,8 @@ export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
 function ssh_login() { ssh -q -o UserKnownHostsFile=/dev/null -A "$1" }
 
 # Aliases
-alias cppcompile='c++ -std=c++11 -stdlib=libc++'
 
-# Command Aliases
-#
-# Chezmoi - dotfile manager
-alias chezmoi='dotfiles'
-
+## Command Aliases
 #
 # Cheat Sheet Service
 function cheatsh() { curl cht.sh/"$1"}
