@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 #
 #
+export SHELL="zsh"
 export TERM="xterm-256color"
 
 # Path to your oh-my-zsh installation.
@@ -13,26 +14,27 @@ HYPHEN_INSENSITIVE="true"
 source $ZSH/oh-my-zsh.sh
 # User configuration
 
-export MANPATH="/usr/local/man:$MANPATH"
+# export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
+
+if command -v vim &> /dev/null; then
   export EDITOR='vim'
 else
   export EDITOR='vi'
 fi
 
 
+{{ if eq .chezmoi.os "linux" }}
+plugins=(git colored-man colorize github)
+{{ else }}
+plugins=(git colored-man colorize brew osx zsh-syntax-highlighting)
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+{{ end }}
 
-# plugins=(git colored-man colorize github jira brew osx zsh-syntax-highlighting)
-#
-plugins=(git colorize github)
-
-
+# Load other env vars
 source ~/dotfiles/env-profiles/env.sh
-
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
