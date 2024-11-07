@@ -27,9 +27,12 @@ fi
 
 
 
-plugins=(git colored-man colorize github jira vagrant brew osx zsh-syntax-highlighting)
+# plugins=(git colored-man colorize github jira brew osx zsh-syntax-highlighting)
+#
+plugins=(git colorize github)
+
 
 source ~/dotfiles/env-profiles/env.sh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
