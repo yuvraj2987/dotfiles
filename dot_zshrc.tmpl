@@ -27,12 +27,13 @@ else
   export EDITOR='vi'
 fi
 
-
-{{ if eq .chezmoi.os "linux" }}
-plugins=(git colored-man colorize github)
-{{ else }}
+{{ if eq .chezmoi.os "darwin" -}}
+# macos zsh plugins
 plugins=(git colored-man colorize brew osx zsh-syntax-highlighting)
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+{{ else -}}
+# Linux zsh plugins
+plugins=(git colored-man colorize github)
 {{ end }}
 
 # Load other env vars
