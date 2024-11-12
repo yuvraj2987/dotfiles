@@ -29,11 +29,11 @@ fi
 
 {{ if eq .chezmoi.os "darwin" -}}
 # macos zsh plugins
-plugins=(git colored-man colorize brew osx zsh-syntax-highlighting)
+plugins=(git colored-man colorize brew osx zsh-syntax-highlighting tmux)
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 {{ else -}}
 # Linux zsh plugins
-plugins=(git colored-man colorize github)
+plugins=(git colored-man colorize github tmux)
 {{ end }}
 
 # Load other env vars
