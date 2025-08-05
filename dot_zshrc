@@ -27,8 +27,7 @@ fi
 
 
 
-# plugins=(git colored-man colorize github jira vagrant brew osx zsh-syntax-highlighting)
-plugins=()
+plugins=(git colored-man colorize github jira vagrant brew osx zsh-syntax-highlighting)
 
 source ~/dotfiles/env-profiles/env.sh
 
