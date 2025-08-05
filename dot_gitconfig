@@ -1,5 +1,7 @@
 [includeIf "gitdir:~/Work/Repo/WePay/"]
 	path = ~/dotfiles/git-profile/custom/work
+[includeIf "gitdir:~/Work/Rbx/Repo/"]
+	path = ~/dotfiles/git-profile/custom/rbx
 # Default configuration
 [include]
 	path = ~/dotfiles/git-profile/custom/personal

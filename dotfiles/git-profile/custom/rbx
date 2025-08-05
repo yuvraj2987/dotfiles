@@ -1,6 +1,6 @@
 [user]
     name = Amit Kulkarni
-    email = amitk@wepay.com
+    email = amitkulkarni@roblox.com
 [alias]
     p = push origin $(git rev-parse --abbrev-ref HEAD)
     co = checkout
@@ -12,7 +12,6 @@
     dump = cat-file -p
     recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format=\"%(refname:short)\"
 [core]
-    excludesfile = /Users/amitk/.gitignore
-[commit]
-    gpgsign = true
-
+	excludesfile = /Users/amitkulkarni/.gitignore
+[pull]
+    ff = only
