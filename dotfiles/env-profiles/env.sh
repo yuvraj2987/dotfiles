@@ -49,10 +49,10 @@ export GOBIN=$GOPATH/bin/
 
 # Java
 # aliase commands to enable easy setting of JDK version
-alias setJDK8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
+# alias setJDK8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
 
 # set to the default JDK
-export JAVA_HOME=`/usr/libexec/java_home`
+# export JAVA_HOME=`/usr/libexec/java_home`
 
 
 # Evaluate pyenv path
@@ -61,6 +61,6 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # Work specific bash files
-source "${HOME}/dotfiles/env-profiles/wepay.sh"
+# source "${HOME}/dotfiles/env-profiles/wepay.sh"
 
 
