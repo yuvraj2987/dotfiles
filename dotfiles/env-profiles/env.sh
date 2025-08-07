@@ -29,8 +29,8 @@ alias ga="git add "
 alias gp="git push "
 alias gd="git diff "
 alias gc="git commit "
-# Wetools
-export PATH=$PATH:/Users/amitk/we-tools-cli/bin
+
+
 
 # # Pyenv
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
@@ -49,10 +49,11 @@ export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 
-# Go
-export GOPATH=$HOME/work/repo/rbx/go
-export GOBIN=$GOPATH/bin/
+
+# Terraform env
+export PATH="$HOME/.tfenv/bin:$PATH"
+
 # Work specific bash files
-# source "${HOME}/dotfiles/env-profiles/wepay.sh"
+source "${HOME}/dotfiles/env-profiles/work.sh"
 
 
