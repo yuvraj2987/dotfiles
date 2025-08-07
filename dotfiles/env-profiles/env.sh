@@ -37,29 +37,21 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
-# Google SDK
-export PATH=$PATH:/Users/amitk/google-cloud-sdk/bin
-
-# Latest Ruby Version
-export PATH=/usr/local/opt/ruby/bin:$PATH
-
-# Go
-export GOPATH=$HOME/Work/Repo/Private/Go-Workspace
-export GOBIN=$GOPATH/bin/
-
-# Java
-# aliase commands to enable easy setting of JDK version
-# alias setJDK8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'
-
-# set to the default JDK
-# export JAVA_HOME=`/usr/libexec/java_home`
-
 
 # Evaluate pyenv path
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+
+# Go env
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+
+# Go
+export GOPATH=$HOME/work/repo/rbx/go
+export GOBIN=$GOPATH/bin/
 # Work specific bash files
 # source "${HOME}/dotfiles/env-profiles/wepay.sh"
 
