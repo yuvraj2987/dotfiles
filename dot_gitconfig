@@ -1,7 +1,8 @@
-[includeIf "gitdir:~/Work/Repo/WePay/"]
-	path = ~/dotfiles/git-profile/custom/work
-[includeIf "gitdir:~/Work/Rbx/Repo/"]
+[user]
+    name = Amit Kulkarni
+    email = yuvraj2987@gmail.com
+[includeIf "gitdir:~/work/rbx/"]
 	path = ~/dotfiles/git-profile/custom/rbx
 # Default configuration
-[include]
+[includeIf "gitdir:~/work/private/"]
 	path = ~/dotfiles/git-profile/custom/personal
