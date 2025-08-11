@@ -2,7 +2,7 @@
 
 
 # Go
-export GOPATH=$HOME/work/repo/rbx/go
+export GOPATH=$HOME/work/rbx/go
 export GOBIN=$GOPATH/bin/
 
 
