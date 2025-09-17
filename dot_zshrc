@@ -27,9 +27,15 @@ fi
 
 
 
-plugins=(git colored-man colorize github jira vagrant brew osx zsh-syntax-highlighting)
+plugins=(git colored-man colorize github jira vagrant brew osx zsh-syntax-highlighting direnv)
 
 source ~/dotfiles/env-profiles/env.sh
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+## Direnv
+export PATH="$HOME/.nix-profile/bin:/nix/var/nix/profiles/default/bin:$PATH"
+### Should have worked with direnv plugin above.
+### Needs to be last entry in zshrc
+eval "$(direnv hook zsh)"
 
