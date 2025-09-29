@@ -50,6 +50,10 @@ export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 
 
+# Ruby env
+eval "$(rbenv init - zsh)"
+
+
 # Terraform env
 export PATH="$HOME/.tfenv/bin:$PATH"
 
