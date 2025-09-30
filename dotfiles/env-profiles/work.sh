@@ -1,4 +1,10 @@
 #!/bin/zsh
+#
+#
+# Chef Binaries
+GEM_VERSION="2.5.0"
+PATH=/opt/chefdk/embedded/bin:$PATH
+PATH=$PATH:/Users/${USER}/.chefdk/gem/ruby/${GEM_VERSION}/bin
 
 
 # Go
