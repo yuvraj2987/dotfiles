@@ -1,6 +1,6 @@
 [user]
     name = Amit Kulkarni
-    email = yuvraj2987@gmail.com
+    email =  4722567+yuvraj2987@users.noreply.github.com
 [includeIf "gitdir:~/work/rbx/"]
 	path = ~/dotfiles/git-profile/custom/rbx
 # Default configuration
