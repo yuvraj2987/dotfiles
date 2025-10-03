@@ -4,5 +4,5 @@
 [includeIf "gitdir:~/work/rbx/"]
 	path = ~/dotfiles/git-profile/custom/rbx
 # Default configuration
-[includeIf "gitdir:~/work/private/"]
+[includeIf "gitdir:~/work/me/"]
 	path = ~/dotfiles/git-profile/custom/personal
