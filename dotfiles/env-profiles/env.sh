@@ -18,9 +18,9 @@ function ssh_login() { ssh -q -o UserKnownHostsFile=/dev/null -A "$1" }
 
 ## Command Aliases
 #
-# Cheat Sheet Service
-function cheatsh() { curl cht.sh/"$1"}
 
+# Kubernetes
+alias kk=kubectl
 # Terraform
 alias tf="terraform"
 # Git
