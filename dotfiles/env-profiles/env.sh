@@ -20,7 +20,7 @@ function ssh_login() { ssh -q -o UserKnownHostsFile=/dev/null -A "$1" }
 #
 
 # Kubernetes
-alias kk=kubectl
+alias k=kubectl
 # Terraform
 alias tf="terraform"
 # Git
