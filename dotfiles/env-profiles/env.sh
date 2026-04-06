@@ -43,6 +43,9 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# UV configuration
+export PATH="$HOME/.local/bin:$PATH"
+
 
 # Go env
 export GOENV_ROOT="$HOME/.goenv"
