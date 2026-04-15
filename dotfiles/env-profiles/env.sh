@@ -11,8 +11,8 @@ export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 ## Add GnuSed to MacOS
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
 
-#ssh without changing known_hosts
-function ssh_login() { ssh -q -o UserKnownHostsFile=/dev/null -A "$1" }
+# # ssh without changing known_hosts
+# function ssh_login() { ssh -q -o UserKnownHostsFile=/dev/null -A "$1" }
 
 # Aliases
 
