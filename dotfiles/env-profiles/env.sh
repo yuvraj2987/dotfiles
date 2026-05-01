@@ -32,27 +32,17 @@ alias gc="git commit "
 
 
 
-# # Pyenv
-# export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-#
-#
-# # Evaluate pyenv path
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
 
 # UV configuration
 export PATH="$HOME/.local/bin:$PATH"
 
 
-# # Go env
-# export GOENV_ROOT="$HOME/.goenv"
-# export PATH="$GOENV_ROOT/bin:$PATH"
-# eval "$(goenv init -)"
-#
-#
+# Go env
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+
+
 # # Ruby env
 # eval "$(rbenv init - zsh)"
 
