@@ -1,6 +1,11 @@
 [user]
     name = Amit Kulkarni
-    email = amitk@wepay.com
+    email = 224851432+amitkulkarni2987@users.noreply.github.com
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
 [alias]
     p = push origin $(git rev-parse --abbrev-ref HEAD)
     co = checkout
@@ -12,7 +17,6 @@
     dump = cat-file -p
     recent = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format=\"%(refname:short)\"
 [core]
-    excludesfile = /Users/amitk/.gitignore
-[commit]
-    gpgsign = true
-
+	excludesfile = /Users/amitkulkarni/.gitignore
+[pull]
+    ff = only
