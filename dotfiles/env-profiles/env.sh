@@ -5,8 +5,6 @@
 export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR='vim'
 
-## Virtual Environment
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 
 ## Add GnuSed to MacOS
 export PATH=/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
